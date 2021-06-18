@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupName, Validators } from '@angular/forms';
+import { CustomValidators } from './custom-validators';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.projectForm = new FormGroup({
-      'projectName': new FormControl(null, Validators.required),
+      'projectName': new FormControl(null, [Validators.required, CustomValidators.invalidProjectName]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'projectStatus': new FormControl('critical')
     })
