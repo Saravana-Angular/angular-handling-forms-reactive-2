@@ -14,6 +14,26 @@
 
           Upon submitting the form, simply print the value to the console
       -->
+      <form>
+        <div class="form-group">
+          <label for="name">Project name</label>
+          <input type="text" id="name" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="status">Project status</label>
+          <select name="status" id="status" class="form-control">
+            <option value="stable">Stable</option>
+            <option value="critical">Critical</option>
+            <option value="finished">Finished</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Create project</button>
+      </form>
+
     </div>
   </div>
 </div>
